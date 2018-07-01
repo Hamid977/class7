@@ -4,80 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-<EditText
-    android:id="@+id/edittext_valueA"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Value of A"
-    />
+    <EditText
+        android:id="@+id/edittext_valueA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Value of A" />
 
 
     <EditText
         android:id="@+id/edittext_valueB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Value of B"
-        />
+        android:gravity="center"
+        android:hint="Value of B" />
 
-    <Button
-        android:id="@+id/button_add"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ADDITION"
-        android:background="#0c6d9d"
-        android:textColor="@android:color/white"
-        android:onClick="calculate"
+        android:orientation="horizontal"
+        >
 
-        />
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#0c6d9d"
+            android:onClick="calculate"
+            android:text="ADD"
+            android:textColor="@android:color/white"
 
-    <Button
-        android:id="@+id/button_sub"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SUBTRACT"
-        android:background="#0c6d9d"
-        android:textColor="@android:color/white"
-        android:onClick="calculate"
+            />
 
-        />
+        <Button
+            android:id="@+id/button_sub"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#ec0f22"
+            android:onClick="calculate"
+            android:text="SUB"
+            android:textColor="@android:color/white"
 
-    <Button
-        android:id="@+id/button_mul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MULTIPLICATION"
-        android:background="#0c6d9d"
-        android:textColor="@android:color/white"
-        android:onClick="calculate"
+            />
 
-        />
+        <Button
+            android:id="@+id/button_mul"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="#b02254"
+            android:onClick="calculate"
+            android:text="MUL"
+            android:textColor="@android:color/white"
 
-    <Button
-        android:id="@+id/button_div"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DIVISION"
-        android:background="#0c6d9d"
-        android:textColor="@android:color/white"
-        android:onClick="calculate"
+            />
 
-        />
+        <Button
+            android:id="@+id/button_div"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#a9a531"
+            android:onClick="calculate"
+            android:text="DIV"
+            android:textColor="@android:color/white"
+
+            />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textview_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:textColor="@android:color/white"
-        android:padding="20dp"
         android:layout_margin="10dp"
         android:background="@android:color/holo_green_dark"
+        android:gravity="center"
+
+        android:padding="20dp"
+        android:text="Your Result is here"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
 
         />
-
 
 </LinearLayout>

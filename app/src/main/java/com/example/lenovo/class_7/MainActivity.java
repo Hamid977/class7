@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        textViewResult.setText(String.valueOf(result));
+        textViewResult.setText("Result : "+String.valueOf(result));
 
     }
 }
